@@ -1,4 +1,4 @@
-const downloadFiles = require("./modules/nodeModules/loadRemoteFiles");
+const downloadFiles = require("./src//modules/nodeModules/loadRemoteFiles");
 
 const fs = require("fs");
 const os = require("os");
