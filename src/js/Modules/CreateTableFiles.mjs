@@ -1,4 +1,4 @@
-export function TableFiles(fileInfo, file, isUploaded, progress) {
+export function CreateTableFiles(fileInfo, file, isUploaded, progress) {
   // Создание заголовков таблицы
   const headers = [
     "Имя файла",
@@ -34,9 +34,9 @@ export function TableFiles(fileInfo, file, isUploaded, progress) {
   // Чекбокс "Загружен"
   const tdCheckbox = document.createElement("td");
   const checkbox = document.createElement("input");
+  checkbox.classList.add("checkbox");
   checkbox.type = "checkbox";
-  checkbox.disabled = !isUploaded;
-  checkbox.checked = isUploaded;
+  checkbox.disabled = isUploaded;
   tdCheckbox.appendChild(checkbox);
   row.appendChild(tdCheckbox);
 
@@ -44,14 +44,12 @@ export function TableFiles(fileInfo, file, isUploaded, progress) {
   const tdProgress = document.createElement("td");
   const progressContainer = document.createElement("div");
   const progressBar = document.createElement("div");
+  progressBar.classList.add("progress-bar");
 
   progressBar.style.width = `${progress}%`;
-  progressBar.style.height = "20px";
   progressBar.style.backgroundColor = "green";
-  progressBar.style.transition = "width 0.5s ease";
 
   progressContainer.style.width = "100%";
-  progressContainer.style.backgroundColor = "#e0e0e0";
   progressContainer.appendChild(progressBar);
 
   tdProgress.appendChild(progressContainer);

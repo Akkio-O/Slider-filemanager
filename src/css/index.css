@@ -17,7 +17,6 @@
 }
 
 /* modal  */
-
 .fullWidth {
     width: auto;
     height: auto;
@@ -64,4 +63,11 @@
     transition: transform 0.2s ease 0s, opacity 0.2s ease 0s;
     transform: scale(0.9);
     opacity: 1;
+}
+
+/* downloadfiles */
+.progress-bar {
+   height: 20px;
+   background-color: #e0e0e0;
+   transition: all 0.5s ease;
 }
